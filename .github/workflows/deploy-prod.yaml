@@ -1,0 +1,131 @@
+# =========================================================
+# CI & Déploiement — IM Business Solutions
+#
+# Adapté d'un workflow de référence pensé pour une appli Symfony
+# (Composer/Docker/runner auto-hébergé). Ce site est en PHP simple sans
+# framework, sans build JS, hébergé en mutualisé classique : les étapes
+# ont été remplacées en conséquence (lint PHP au lieu de PHPUnit/Symfony,
+# déploiement FTPS au lieu de Docker Compose sur VPS).
+#
+# Secrets GitHub à configurer avant le premier déploiement
+# (Settings → Secrets and variables → Actions) :
+#   FTP_SERVER      ex. ftp.im-business-solutions.fr
+#   FTP_USERNAME
+#   FTP_PASSWORD
+#   FTP_SERVER_DIR  dossier racine web côté hébergeur, ex. /www/ ou /
+#
+# Si l'hébergeur propose le SFTP (recommandé, plus sûr que le FTP/FTPS),
+# remplacer l'étape de déploiement par l'action wlixcc/SFTP-Deploy-Action.
+# =========================================================
+
+name: CI & Déploiement
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  ci:
+    name: Vérifications
+    runs-on: ubuntu-latest
+
+    steps:
+      # =========================
+      # CHECKOUT
+      # =========================
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # =========================
+      # PHP
+      # =========================
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+          extensions: mbstring, pdo_mysql, fileinfo
+          coverage: none
+
+      # =========================
+      # VERIFICATIONS
+      # (pas de Composer/npm/Symfony/PHPUnit : ce site n'en a pas besoin)
+      # =========================
+
+      - name: Vérifier la syntaxe de tous les fichiers PHP
+        run: |
+          status=0
+          while IFS= read -r -d '' file; do
+            echo "-- $file"
+            php -l "$file" || status=1
+          done < <(find . -name "*.php" -not -path "./.git/*" -print0)
+          exit $status
+
+      - name: Vérifier qu'aucun identifiant réel n'est commité
+        run: |
+          if [ -f includes/config.php ]; then
+            echo "::error::includes/config.php ne doit jamais être commité (il contient les identifiants de la base de données)."
+            exit 1
+          fi
+
+  deploy-prod:
+    name: Déploiement production (FTPS)
+    needs: ci
+    runs-on: ubuntu-latest
+    concurrency:
+      group: prod-deploy
+      cancel-in-progress: false
+
+    steps:
+      # =========================
+      # CHECKOUT
+      # =========================
+
+      - name: Checkout du tag
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # =========================
+      # SECURITE : tag issu de main
+      # =========================
+
+      - name: Vérifier que le tag est issu de main
+        id: check
+        run: |
+          git fetch origin main --quiet
+          if git merge-base --is-ancestor HEAD origin/main; then
+            echo "on_main=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "on_main=false" >> "$GITHUB_OUTPUT"
+            echo "Tag non issu de main, déploiement prod ignoré."
+          fi
+
+      # =========================
+      # DEPLOY VIA FTPS
+      # (hébergement mutualisé : pas de VPS, pas de Docker, pas de runner
+      # auto-hébergé nécessaire — un runner GitHub standard suffit)
+      # =========================
+
+      - name: Déployer par FTPS
+        if: steps.check.outputs.on_main == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          # includes/config.php et assets/images/projets/ ne sont de toute
+          # façon pas versionnés (voir .gitignore) : cette liste est une
+          # protection supplémentaire pour qu'ils ne soient jamais touchés
+          # par le déploiement, même en cas d'erreur de configuration.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            sql/**
+            includes/config.php
+            assets/images/projets/**

@@ -1,0 +1,13 @@
+# Configuration locale (identifiants base de données / e-mail) — jamais commitée.
+# Voir includes/config.sample.php pour le modèle.
+/includes/config.php
+
+# Photos des réalisations envoyées depuis l'admin : contenu généré en
+# production, pas du code source. Le dossier est recréé automatiquement
+# par admin/actions/realisation-save.php si besoin.
+/assets/images/projets/*
+!/assets/images/projets/.gitkeep
+
+# Fichiers système
+.DS_Store
+Thumbs.db
