@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}Réalisations | IM Business Solutions{% endblock %}
+{% block body %}
+<main class="wrapper">
+    <h1>Nos réalisations</h1>
+    <div class="projects-grid">
+    {% for realisation in realisations %}
+        <article class="project-card">
+            {% if realisation.imagePath %}<img src="{{ realisation.imagePath }}" alt="{{ realisation.title }}">{% endif %}
+            <h2>{{ realisation.title }}</h2>
+            <p>{{ realisation.description }}</p>
+        </article>
+    {% else %}
+        <p>De nouvelles réalisations arrivent bientôt.</p>
+    {% endfor %}
+    </div>
+</main>
+{% endblock %}

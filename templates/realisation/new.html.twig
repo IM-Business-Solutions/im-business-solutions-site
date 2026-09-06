@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% block title %}Ajouter une réalisation{% endblock %}
+{% block body %}
+<div class="wrapper">
+    <h1>Ajouter une réalisation</h1>
+    {{ include('realisation/_form.html.twig', {button_label: 'Ajouter'}) }}
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réalisations{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <h1>Réalisations</h1>
+    {% for message in app.flashes('success') %}<div class="flash flash--success">{{ message }}</div>{% endfor %}
+    <p><a href="{{ path('app_realisation_new') }}">Ajouter une réalisation</a></p>
+    <table>
+        <thead><tr><th>Projet</th><th>Catégorie</th><th>Client</th><th>Statut</th><th>Actions</th></tr></thead>
+        <tbody>
+        {% for realisation in realisations %}
+            <tr>
+                <td>{{ realisation.title }}</td>
+                <td>{{ realisation.category }}</td>
+                <td>{{ realisation.client ?: '—' }}</td>
+                <td>{{ realisation.status == 'publie' ? 'Publié' : 'Brouillon' }}</td>
+                <td>
+                    <a href="{{ path('app_realisation_edit', {id: realisation.id}) }}">Modifier</a>
+                    <form method="post" action="{{ path('app_realisation_delete', {id: realisation.id}) }}" style="display:inline">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ realisation.id) }}">
+                        <button type="submit">Supprimer</button>
+                    </form>
+                </td>
+            </tr>
+        {% else %}
+            <tr><td colspan="5">Aucune réalisation.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

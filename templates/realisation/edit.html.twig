@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block title %}Modifier une réalisation{% endblock %}
+{% block body %}
+<div class="wrapper">
+    <h1>Modifier une réalisation</h1>
+    {% if realisation.imagePath %}<p>Image actuelle : <img src="{{ realisation.imagePath }}" alt="" width="120"></p>{% endif %}
+    {{ include('realisation/_form.html.twig', {button_label: 'Enregistrer'}) }}
+</div>
+{% endblock %}

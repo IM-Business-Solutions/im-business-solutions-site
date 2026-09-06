@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — IM Business Solutions</title>
+    <meta
+      name="description"
+      content="Contactez IM Business Solutions : téléphone, email et formulaire pour échanger sur votre projet et obtenir un accompagnement sur-mesure."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header" id="site-header">
+      <div class="container site-header__inner">
+        <a href="index.html" class="logo" aria-label="IM Business Solutions — Accueil">
+          <img
+            src="assets/logo/im-business-solutions-white.png"
+            alt="IM Business Solutions"
+            width="150"
+            height="118"
+          />
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-nav" aria-label="Navigation principale">
+          <ul class="primary-nav__list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="methode.html">Méthode</a></li>
+            <li><a href="realisations.php">Réalisations</a></li>
+            <li><a href="contact.html" class="is-active">Contact</a></li>
+          </ul>
+          <a href="#" class="btn btn--gold nav-cta" id="open-quote-modal">
+            Demander un devis
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="page-hero">
+        <div class="hero__bg page-hero__bg page-hero__bg--contact" aria-hidden="true"></div>
+
+        <div class="container page-hero__inner">
+          <div class="page-hero__content">
+            <p class="page-hero__eyebrow">Contact</p>
+            <h1 class="page-hero__title">
+              <span>Échangeons sur</span>
+              <span class="accent">vos projets</span>
+            </h1>
+
+            <span class="bar" aria-hidden="true"></span>
+
+            <p class="page-hero__text">
+              Vous avez une question, un projet ou besoin d'un accompagnement ?
+              Je suis à votre écoute pour comprendre vos besoins et vous proposer
+              la solution la plus adaptée à vos objectifs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SÉPARATION COURBE ============ -->
+      <div class="curve-sep" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+          <path
+            class="curve-sep__fill"
+            d="M0,22 C260,6 440,44 720,36 C1000,28 1200,52 1440,30 L1440,70 L0,70 Z"
+          />
+          <path
+            class="curve-sep__line"
+            d="M0,22 C260,6 440,44 720,36 C1000,28 1200,52 1440,30"
+            vector-effect="non-scaling-stroke"
+          />
+        </svg>
+      </div>
+
+      <!-- ================= COORDONNÉES + FORMULAIRE ================= -->
+      <section class="contact">
+        <div class="container contact-grid">
+          <div class="contact-grid__info">
+            <p class="eyebrow">Mes coordonnées</p>
+
+            <div class="contact-info">
+              <div class="contact-info__item">
+                <span class="icon-circle icon-circle--sm icon-circle--solid" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.73a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.27a2 2 0 0 1 2.11-.45c.87.34 1.79.57 2.73.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="contact-info__label">Téléphone</p>
+                  <a href="tel:+33782988352" class="contact-info__value">07 82 98 83 52</a>
+                </div>
+              </div>
+
+              <div class="contact-info__item">
+                <span class="icon-circle icon-circle--sm icon-circle--solid" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="m2 7 10 6 10-6" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="contact-info__label">Email</p>
+                  <a href="mailto:contact@im-business-solutions.fr" class="contact-info__value">contact@im-business-solutions.fr</a>
+                </div>
+              </div>
+
+              <div class="contact-info__item">
+                <span class="icon-circle icon-circle--sm icon-circle--solid" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M2 12h20" />
+                    <path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="contact-info__label">Site web</p>
+                  <a href="https://im-business-solutions.fr" target="_blank" rel="noopener" class="contact-info__value">im-business-solutions.fr</a>
+                </div>
+              </div>
+
+              <div class="contact-info__item">
+                <span class="icon-circle icon-circle--sm icon-circle--solid" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="contact-info__label">Horaires</p>
+                  <span class="contact-info__value">Lundi – Vendredi : 9h00 – 18h00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-grid__form">
+            <p class="eyebrow">Envoyez-moi un message</p>
+
+            <form class="contact-form" id="contact-form" action="api/contact.php" method="post" novalidate>
+              <div class="hp-field" aria-hidden="true">
+                <label for="contact-website">Ne pas remplir ce champ</label>
+                <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <input class="form-control" type="text" name="nom" placeholder="Nom / Prénom *" required />
+                </div>
+                <div class="form-field">
+                  <input class="form-control" type="text" name="entreprise" placeholder="Entreprise" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <input class="form-control" type="email" name="email" placeholder="Email *" required />
+              </div>
+
+              <div class="form-field">
+                <input class="form-control" type="tel" name="telephone" placeholder="Téléphone" />
+              </div>
+
+              <div class="form-field">
+                <textarea class="form-control" name="message" placeholder="Votre message *" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--gold">
+                Envoyer le message
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+
+              <p class="form-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="11" rx="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                Vos données sont confidentielles et ne seront jamais partagées.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CTA ================= -->
+      <section class="cta-band">
+        <div class="cta-band__skyline" aria-hidden="true">
+          <svg viewBox="0 0 600 180" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="18" y="92" width="46" height="88" />
+            <rect x="76" y="58" width="38" height="122" />
+            <rect x="126" y="112" width="40" height="68" />
+            <rect x="178" y="40" width="44" height="140" />
+            <rect x="234" y="84" width="36" height="96" />
+            <rect x="282" y="120" width="46" height="60" />
+            <rect x="340" y="54" width="40" height="126" />
+            <rect x="392" y="100" width="38" height="80" />
+            <rect x="442" y="30" width="48" height="150" />
+            <rect x="502" y="94" width="40" height="86" />
+            <rect x="554" y="118" width="34" height="62" />
+            <path d="M0 180h600" />
+          </svg>
+        </div>
+
+        <div class="container cta-band__inner">
+          <span class="icon-circle icon-circle--lg icon-circle--solid" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7.5 20A9 9 0 1 0 4 16.5L2.5 21.5Z" />
+              <path d="M8 10h.01M12 10h.01M16 10h.01" />
+            </svg>
+          </span>
+
+          <div class="cta-band__text">
+            <h2>Prêt à donner vie à vos idées&nbsp;?</h2>
+            <p>
+              Discutons ensemble de votre projet et trouvons les solutions qui
+              feront la différence.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <a href="index.html" class="footer-logo" aria-label="IM Business Solutions">
+          <img
+            src="assets/logo/im-business-solutions-white.png"
+            alt="IM Business Solutions"
+            width="150"
+            height="118"
+          />
+        </a>
+        <span class="footer-sep" aria-hidden="true"></span>
+        <ul class="footer-contact">
+          <li>
+            <span class="icon-circle icon-circle--sm" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.73a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.27a2 2 0 0 1 2.11-.45c.87.34 1.79.57 2.73.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </span>
+            <a href="tel:+33782988352">07 82 98 83 52</a>
+          </li>
+          <li>
+            <span class="icon-circle icon-circle--sm" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m2 7 10 6 10-6" />
+              </svg>
+            </span>
+            <a href="mailto:contact@im-business-solutions.fr">contact@im-business-solutions.fr</a>
+          </li>
+          <li>
+            <span class="icon-circle icon-circle--sm" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M2 12h20" />
+                <path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20" />
+              </svg>
+            </span>
+            <a href="https://im-business-solutions.fr" target="_blank" rel="noopener">im-business-solutions.fr</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <p class="site-footer__legal">
+          &copy; <span id="year"></span> IM Business Solutions — Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

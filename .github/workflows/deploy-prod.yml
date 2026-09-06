@@ -1,0 +1,87 @@
+name: CI & Déploiement
+
+on:
+    push:
+        tags:
+            - 'v*.*.*'
+
+jobs:
+    ci:
+        name: Tests & vérifications
+        runs-on: ubuntu-latest
+
+        env:
+            APP_ENV: test
+            APP_SECRET: ci-secret
+            DATABASE_URL: 'mysql://app:app@127.0.0.1:3306/app?serverVersion=11.4-MariaDB&charset=utf8mb4'
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.4'
+                  extensions: intl,mbstring,pdo_mysql
+                  coverage: none
+
+            - name: Validate composer.json
+              run: composer validate --no-check-publish
+
+            - name: Install Composer dependencies
+              run: composer install --no-interaction --prefer-dist --no-progress
+
+            - name: Symfony container lint
+              run: php bin/console lint:container --env=prod
+
+            - name: Symfony Twig lint
+              run: php bin/console lint:twig templates --env=prod
+
+            - name: Symfony YAML lint
+              run: php bin/console lint:yaml config --env=prod
+
+            - name: PHPUnit
+              run: php bin/phpunit --fail-on-warning --fail-on-risky
+
+    deploy-prod:
+        name: Déploiement production (OVH)
+        needs: ci
+        runs-on: ubuntu-latest
+        concurrency:
+            group: prod-deploy
+            cancel-in-progress: false
+
+        steps:
+            - name: Checkout du tag
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Vérifier que le tag est sur main
+              id: check
+              shell: bash
+              run: |
+                  git fetch origin main --quiet
+                  if git merge-base --is-ancestor "$GITHUB_SHA" origin/main; then
+                    echo "on_main=true" >> "$GITHUB_OUTPUT"
+                  else
+                    echo "on_main=false" >> "$GITHUB_OUTPUT"
+                    echo "Tag non issu de main, déploiement prod ignoré."
+                  fi
+
+            - name: Déployer les fichiers publics sur OVH
+              if: steps.check.outputs.on_main == 'true'
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+              with:
+                  server: ftp.cluster121.hosting.ovh.net
+                  username: imbusim
+                  password: ${{ secrets.OVH_FTP_PASSWORD }}
+                  protocol: ftps
+                  port: 21
+                  local-dir: ./public/
+                  server-dir: ./
+                  exclude: |
+                      **/.DS_Store
+                      **/.git*
+                      **/.env*
