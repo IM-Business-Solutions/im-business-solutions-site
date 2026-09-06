@@ -1,0 +1,9 @@
+{{ form_start(form) }}
+    {{ form_row(form.firstName) }}
+    {{ form_row(form.lastName) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.role) }}
+    {{ form_row(form.plainPassword) }}
+
+    <button type="submit">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}
