@@ -1,0 +1,17 @@
+{
+  "name": "im-business-solutions-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "watch": "vite",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo": "^8.0.23"
+  },
+  "devDependencies": {
+    "vite": "^8.2.2"
+  }
+}

@@ -4,21 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0ea56b-14b8-41ae-87e9-dd700c640e70" name="Changes" comment="" />
+    <list default="true" id="4b0ea56b-14b8-41ae-87e9-dd700c640e70" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/stimulus_bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/stimulus_bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <execution>
-        <execution />
+        <execution>
+          <execution />
+        </execution>
       </execution>
     </execution>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="65" />
+    <option name="cachedIndexableFilesCount" value="96" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -29,18 +37,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "selkniez35"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;selkniez35&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/IM-Business-Solutions/im-business-solutions-site.git",
-    "accountId": "fa6553fd-ecc9-4e68-97d3-d297f7a0752c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/IM-Business-Solutions/im-business-solutions-site.git&quot;,
+    &quot;accountId&quot;: &quot;fa6553fd-ecc9-4e68-97d3-d297f7a0752c&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -48,66 +56,198 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000003598751948" />
-      <entry key="S2" value="1.0245107714097426" />
-      <entry key="S5" value="1.2399611240049506" />
-      <entry key="S10" value="1.6331957622827513" />
-      <entry key="S30" value="3.256524529079573" />
-      <entry key="S60" value="4.805269387952453" />
-      <entry key="M2" value="6.372134467019973" />
-      <entry key="M5" value="9.428461708524233" />
-      <entry key="M10" value="12.315399965542664" />
-      <entry key="M15" value="13.878145419166993" />
-      <entry key="M30" value="16.581438351323253" />
-      <entry key="H1" value="19.659486239661685" />
-      <entry key="H2" value="22.473415928910036" />
-      <entry key="H4" value="24.45963307326855" />
-      <entry key="D1" value="26.531202901868223" />
-      <entry key="W1" value="26.931813741187018" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000047845832" />
+      <entry key="S10" value="1.0000717428876775" />
+      <entry key="S30" value="1.0746057237756876" />
+      <entry key="S60" value="1.5675688440494797" />
+      <entry key="M2" value="2.657710517854236" />
+      <entry key="M5" value="4.419721373063494" />
+      <entry key="M10" value="6.866321464352675" />
+      <entry key="M15" value="9.253345154777989" />
+      <entry key="M30" value="14.481727047767844" />
+      <entry key="H1" value="20.172176795420448" />
+      <entry key="H2" value="25.111428866877034" />
+      <entry key="H4" value="28.56403156630348" />
+      <entry key="D1" value="32.17809098531395" />
+      <entry key="W1" value="32.88034183141326" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.542872641343806E-200" />
-      <entry key="MS500" value="1.090601311510694E-40" />
-      <entry key="S2" value="1.0219190707541044E-10" />
-      <entry key="S5" value="1.0087106393477482E-4" />
-      <entry key="S10" value="0.010043458763532354" />
-      <entry key="S30" value="0.21575511487256793" />
-      <entry key="S60" value="0.4644944723810695" />
-      <entry key="M2" value="0.6815383132158231" />
-      <entry key="M5" value="0.8578198863590331" />
-      <entry key="M10" value="0.9261856651660255" />
-      <entry key="M15" value="0.9501642878787269" />
-      <entry key="M30" value="0.9747637087411116" />
-      <entry key="H1" value="0.9873012249263708" />
-      <entry key="H2" value="0.9936303260903274" />
-      <entry key="H4" value="0.9968100752351612" />
-      <entry key="D1" value="0.9994676378516052" />
-      <entry key="W1" value="0.999923930907195" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.561131743558268E-256" />
+      <entry key="S5" value="4.757467409126318E-103" />
+      <entry key="S10" value="6.897439676522234E-52" />
+      <entry key="S30" value="8.83546281899688E-18" />
+      <entry key="S60" value="2.9724506419782462E-9" />
+      <entry key="M2" value="5.452018563778233E-5" />
+      <entry key="M5" value="0.01970710953035842" />
+      <entry key="M10" value="0.140382012844803" />
+      <entry key="M15" value="0.27011019521354535" />
+      <entry key="M30" value="0.519721266847476" />
+      <entry key="H1" value="0.7209169625188996" />
+      <entry key="H2" value="0.8490682908452647" />
+      <entry key="H4" value="0.9214490169538763" />
+      <entry key="D1" value="0.9864578924035257" />
+      <entry key="W1" value="0.9980540902765056" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.992077994127077E-5" />
-      <entry key="MS500" value="0.13792932765731927" />
-      <entry key="S2" value="0.6276436892941089" />
-      <entry key="S5" value="1.0321297548433113" />
-      <entry key="S10" value="1.5062470987540573" />
-      <entry key="S30" value="3.389341661339545" />
-      <entry key="S60" value="5.212253922143006" />
-      <entry key="M2" value="7.0161563572364996" />
-      <entry key="M5" value="10.262318535261757" />
-      <entry key="M10" value="13.224941070531752" />
-      <entry key="M15" value="14.81558148537077" />
-      <entry key="M30" value="17.548784770184337" />
-      <entry key="H1" value="20.642748683651767" />
-      <entry key="H2" value="23.464930790664663" />
-      <entry key="H4" value="25.455358986774442" />
-      <entry key="D1" value="27.530485916807738" />
-      <entry key="W1" value="27.931711197326198" />
+      <entry key="MS100" value="0.721964597761248" />
+      <entry key="MS500" value="0.9369214468724255" />
+      <entry key="S2" value="0.9838429889437325" />
+      <entry key="S5" value="0.99350560154791" />
+      <entry key="S10" value="0.9968178611180939" />
+      <entry key="S30" value="1.0716075279637864" />
+      <entry key="S60" value="1.5576617404971522" />
+      <entry key="M2" value="2.642674348666453" />
+      <entry key="M5" value="4.426910523833379" />
+      <entry key="M10" value="6.996651981022582" />
+      <entry key="M15" value="9.514417861560055" />
+      <entry key="M30" value="14.994567899989436" />
+      <entry key="H1" value="20.88862458815565" />
+      <entry key="H2" value="25.95791468874396" />
+      <entry key="H4" value="29.48408725884539" />
+      <entry key="D1" value="33.164300946336326" />
+      <entry key="W1" value="33.878360096165345" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8,
-  "fromUser": false
-}]]></component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/file-filter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/git-state" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/staabm/side-effects-detector" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php85" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-deepclone" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset-mapper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-messenger" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stimulus-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/ux-turbo" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/symfony/type-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/notifier" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/messenger" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3IubU11VZITI3WP2Ad36k26GZtX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -123,7 +263,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "admin-space",
+    "git-widget-placeholder": "#1 on feat/user-account-crud",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "//wsl.localhost/Ubuntu/var/www/im-business-solutions-site",
     "node.js.detected.package.eslint": "true",
@@ -134,6 +274,12 @@
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
+      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -149,7 +295,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1788617413216</updated>
-      <workItem from="1788617414478" duration="3307000" />
+      <workItem from="1788617414478" duration="5559000" />
+      <workItem from="1788726325800" duration="661000" />
     </task>
     <servers />
   </component>
