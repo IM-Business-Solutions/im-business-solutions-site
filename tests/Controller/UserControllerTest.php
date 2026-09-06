@@ -16,6 +16,7 @@ final class UserControllerTest extends WebTestCase
     private KernelBrowser $client;
     private EntityManagerInterface $em;
     private UserRepository $users;
+    private User $admin;
 
     protected function setUp(): void
     {
@@ -26,6 +27,9 @@ final class UserControllerTest extends WebTestCase
         $this->em->getConnection()->executeStatement(
             $this->em->getConnection()->getDatabasePlatform()->getTruncateTableSQL('`user`', false)
         );
+
+        $this->admin = $this->makeUser('admin@example.com');
+        $this->client->loginUser($this->admin);
     }
 
     public function testIndexIsSuccessful(): void
@@ -77,7 +81,7 @@ final class UserControllerTest extends WebTestCase
         self::assertResponseStatusCodeSame(422);
         self::assertSelectorTextContains('body', 'au moins 8 caractères');
         self::assertSelectorTextContains('body', 'existe déjà');
-        self::assertCount(1, $this->users->findAll());
+        self::assertCount(2, $this->users->findAll());
     }
 
     public function testEditUpdatesUserAndKeepsPasswordWhenBlank(): void
@@ -112,7 +116,7 @@ final class UserControllerTest extends WebTestCase
         $this->client->submitForm('Supprimer');
 
         self::assertResponseRedirects('/user');
-        self::assertCount(0, $this->users->findAll());
+        self::assertCount(1, $this->users->findAll());
     }
 
     private function makeUser(string $email): User
